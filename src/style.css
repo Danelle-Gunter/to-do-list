@@ -1,3 +1,30 @@
 body {
     background-color: black;
 }
+
+header {
+    background-color: #aaa;
+}
+
+.create-btn {
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border: 2px solid darkgreen;
+}
+
+main {
+    background-color: white;
+    height: 90vh;
+}
+
+.todo-card {
+    border: 2px solid blue;
+    border-radius: 20px;
+    color: blue;
+    width: 25vw;
+    height: 25vh;
+    text-align: center;
+    margin: 10px;
+}

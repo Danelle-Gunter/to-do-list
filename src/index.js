@@ -1,9 +1,4 @@
 import './style.css';
+import displayWebsite from './website';
 
-function component() {
-    const element = document.createElement('div');
-
-    return element;
-}
-
-document.body.appendChild(component());
+displayWebsite();
