@@ -6,12 +6,17 @@ header {
     background-color: #aaa;
 }
 
-.create-btn {
+.new-btn {
     background-color: green;
     color: white;
     width: 100px;
     height: 100px;
     border: 2px solid darkgreen;
+}
+
+.new-btn:hover {
+    background-color: lightgreen;
+    color: black;
 }
 
 main {
