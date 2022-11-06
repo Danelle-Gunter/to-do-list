@@ -4,7 +4,7 @@ const TodoFactory = () => {
         const card = document.createElement('article');
         card.classList.add('todo-card');
 
-        card.textContent = 'Hello';
+        card.textContent = 'Lorem ipsum dolor sit amet...';
 
         return card;
     };

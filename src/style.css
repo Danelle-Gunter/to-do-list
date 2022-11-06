@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+    display: grid;
 }
 
 header {
@@ -19,17 +25,29 @@ header {
     color: black;
 }
 
-main {
-    background-color: white;
-    height: 90vh;
+section {
+    height: auto;
+    width: 100vw;
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+    grid-template-rows:  repeat(auto-fill, auto-fill);
+    padding: 20px;
 }
 
 .todo-card {
     border: 2px solid blue;
     border-radius: 20px;
-    color: blue;
-    width: 25vw;
-    height: 25vh;
+    background-color: white;
+    width: auto;
+    height: inherit;
     text-align: center;
     margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    padding-top: 20px;
+    height: 50px;
+    text-align: center;
 }
