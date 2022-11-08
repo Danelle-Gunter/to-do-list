@@ -23,8 +23,7 @@ function createHeader() {
     newBtn.addEventListener('click', e => {
         e.preventDefault();
         const fi = document.querySelector('#form-input').value.trim();
-        formProcessing(fi);
-        //createTodo();
+        createTodo(formProcessing(fi));
     });
 
     form.appendChild(formInput);
@@ -49,8 +48,8 @@ function createFooter() {
     return footer;
 }
 
-function createTodo() {
-    const newTodo = TodoFactory();
+function createTodo(uInput) {
+    const newTodo = TodoFactory(uInput);
     const section = document.getElementById('container');
     section.appendChild(newTodo.createTodoInDom());
 }

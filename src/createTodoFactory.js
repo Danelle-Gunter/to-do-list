@@ -1,10 +1,10 @@
-const TodoFactory = () => {
+const TodoFactory = (userInput) => {
 
     const createTodoInDom = () => {
         const card = document.createElement('article');
         card.classList.add('todo-card');
 
-        card.textContent = 'words';
+        card.textContent = `${userInput}`;
 
         return card;
     };
