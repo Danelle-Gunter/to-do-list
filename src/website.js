@@ -1,11 +1,8 @@
 import TodoFactory from './createTodoFactory';
 import formProcessing from './form';
 
-function createHeader() {
-    const header = document.createElement('header');
-    
+function createForm() {
     const form = document.createElement('form');
-    //form.setAttribute('action', 'form.js');
     form.setAttribute('method', 'post');
     form.setAttribute('id', 'form');
 
@@ -22,16 +19,29 @@ function createHeader() {
     newBtn.textContent = '+ New';
     newBtn.addEventListener('click', e => {
         e.preventDefault();
-        const fi = document.querySelector('#form-input').value.trim();
-        createTodo(formProcessing(fi));
+        let fi = document.querySelector('#form-input');
+        let processFi = fi.value.trim();
+        createTodo(formProcessing(processFi));
+        fi.value = '';
     });
 
     form.appendChild(formInput);
     form.appendChild(newBtn);
 
-    header.appendChild(form);
+    return form;
+}
+
+function createHeader() {
+    const header = document.createElement('header');
+    header.appendChild(createForm());
 
     return header;
+}
+
+function createTodo(uInput) {
+    const newTodo = TodoFactory(uInput);
+    const section = document.getElementById('container');
+    section.appendChild(newTodo.createTodoInDom());
 }
 
 function createSection() {
@@ -46,12 +56,6 @@ function createFooter() {
     footer.textContent = 'Footer stuff goes here';
 
     return footer;
-}
-
-function createTodo(uInput) {
-    const newTodo = TodoFactory(uInput);
-    const section = document.getElementById('container');
-    section.appendChild(newTodo.createTodoInDom());
 }
 
 function displayWebsite() {

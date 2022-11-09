@@ -43,6 +43,11 @@ form {
     color: black;
 }
 
+.del-btn {
+    background-color: red;
+    color: white;
+}
+
 section {
     height: auto;
     width: 100vw;
@@ -54,7 +59,9 @@ section {
 }
 
 .todo-card {
-    border: 2px solid blue;
+    display: flex;
+    gap: 10px;
+    border: 2px solid darkgreen;
     border-radius: 20px;
     background-color: white;
     width: auto;
