@@ -2,4 +2,4 @@ function deleteTodo() {
     console.log('deleting...');
 }
 
-export default deleteTodo;
+//export default deleteTodo;

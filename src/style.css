@@ -43,9 +43,10 @@ form {
     color: black;
 }
 
-.del-btn {
-    background-color: red;
-    color: white;
+.completed {
+    color: #808080;
+    background-color: black;
+    text-decoration: line-through;
 }
 
 section {
@@ -69,6 +70,10 @@ section {
     text-align: center;
     margin: 10px;
     padding: 10px;
+}
+
+.user-note {
+    cursor: pointer;
 }
 
 footer {

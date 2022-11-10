@@ -1,4 +1,4 @@
-import deleteTodo from './todoActions';
+//import deleteTodo from './todoActions';
 
 const TodoFactory = (userInput) => {
 
@@ -9,17 +9,20 @@ const TodoFactory = (userInput) => {
         card.setAttribute('id', todoId);
 
         const userNote = document.createElement('p');
+        userNote.classList.add('user-note');
         userNote.textContent = `${userInput}`;
+        userNote.addEventListener('click', () => {
+            alert('clicked card');
+        });
 
-        const delBtn = document.createElement('button');
-        delBtn.classList.add('del-btn');
-        delBtn.textContent = 'DEL';
-        delBtn.addEventListener('click', () => {
-            deleteTodo();
+        const ckBox = document.createElement('input');
+        ckBox.setAttribute('type', 'checkbox');
+        ckBox.addEventListener('change', () => {
+            card.classList.toggle('completed');
         });
 
         card.appendChild(userNote);
-        card.appendChild(delBtn);
+        card.appendChild(ckBox);
 
         return card;
     };
